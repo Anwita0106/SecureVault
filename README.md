@@ -38,7 +38,7 @@ Visit http://localhost
 
 ###  Login Page
 
-![Login Page](./screenshots/sv.login.png.jpeg)
+![Login Page](./screenshots/sv.login_page.png.jpeg)
 
 ### Dashboard
 
@@ -109,9 +109,9 @@ SecureVault/
 
 ---
 
-## 🗄 Database Schema
+##  Database Schema
 
-See [docs/database-schema.md](./docs/database-schema.md) for the complete schema.
+SecureVault uses PostgreSQL with dedicated tables for users, files, roles, share links, and audit logs.
 
 
 ##  API Reference
