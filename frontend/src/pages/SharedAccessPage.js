@@ -16,6 +16,7 @@ export default function SharedAccessPage() {
   const [fileInfo, setFileInfo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [file, setFile] = useState(null);
   const [password, setPassword] = useState('');
   const [needsPassword, setNeedsPassword] = useState(false);
   const [downloading, setDownloading] = useState(false);

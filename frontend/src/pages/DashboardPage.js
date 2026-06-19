@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Files, Users, HardDrive, Share2, Shield, AlertTriangle,
-  Upload,  TrendingUp, CheckCircle, XCircle, Clock
+  Upload,  TrendingUp, CheckCircle, XCircle, Clock,Activity 
 } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { securityAPI } from '../api/client';
