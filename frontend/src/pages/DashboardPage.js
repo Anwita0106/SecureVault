@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Files, Users, HardDrive, Share2, Shield, AlertTriangle,
-  Upload, Activity, TrendingUp, CheckCircle, XCircle, Clock
+  Upload,  TrendingUp, CheckCircle, XCircle, Clock
 } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { securityAPI } from '../api/client';
@@ -92,7 +92,7 @@ export default function DashboardPage() {
     { name: 'Infected', value: stats?.infected_files || 0, color: '#ef4444' },
   ].filter(d => d.value > 0);
 
-  const statusColors = { success: 'text-green-400', failure: 'text-red-400', warning: 'text-yellow-400' };
+ 
 
   return (
     <div className="space-y-6">

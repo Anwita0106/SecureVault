@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Activity, Search, Filter, RefreshCw, CheckCircle, XCircle, AlertCircle, Clock } from 'lucide-react';
+import React, { useState, useEffect , useCallback} from 'react';
+import { Search, RefreshCw, CheckCircle, XCircle, AlertCircle, Clock } from 'lucide-react';
 import { securityAPI } from '../api/client';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
@@ -19,20 +19,26 @@ export default function AuditLogsPage() {
   const [statusFilter, setStatusFilter] = useState('');
   const [days, setDays] = useState(7);
 
-  const loadLogs = async () => {
-    setLoading(true);
+  const loadLogs = useCallback(async () => {
     try {
-      const endpoint = isAdmin ? securityAPI.getAuditLogs : securityAPI.getMyActivity;
-      const res = await endpoint({ days, limit: 200, status: statusFilter || undefined });
+      const endpoint = isAdmin
+        ? securityAPI.getAuditLogs
+        : securityAPI.getMyActivity;
+
+      const res = await endpoint({
+        days,
+        limit: 200,
+        status: statusFilter,
+      });
+
       setLogs(res.data);
     } catch {
       toast.error('Failed to load audit logs');
     } finally {
       setLoading(false);
     }
-  };
-
-  useEffect(() => { loadLogs(); }, [days, statusFilter]);
+  }, [days, statusFilter, isAdmin]);
+  useEffect(() => {loadLogs();}, [loadLogs]);
 
   const filtered = logs.filter(log => {
     if (!search) return true;

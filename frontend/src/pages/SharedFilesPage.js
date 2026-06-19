@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Share2, Copy, Trash2, Clock, Download, Eye, RefreshCw, CheckCircle, XCircle } from 'lucide-react';
+import { Share2, Copy,Clock, Download, Eye, RefreshCw, CheckCircle, XCircle } from 'lucide-react';
 import { filesAPI } from '../api/client';
 import toast from 'react-hot-toast';
-import { format, formatDistanceToNow, isPast } from 'date-fns';
+import {  formatDistanceToNow, isPast } from 'date-fns';
 
 export default function SharedFilesPage() {
   const [shares, setShares] = useState([]);

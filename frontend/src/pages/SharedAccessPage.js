@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useCallback} from 'react';
 import { useParams } from 'react-router-dom';
 import { Download, Lock, FileText, Shield, AlertTriangle, Eye } from 'lucide-react';
 import { filesAPI } from '../api/client';
@@ -20,26 +20,20 @@ export default function SharedAccessPage() {
   const [needsPassword, setNeedsPassword] = useState(false);
   const [downloading, setDownloading] = useState(false);
 
-  const fetchFile = async (pwd = null) => {
+  const fetchFile = useCallback(async () => {
     try {
-      const res = await filesAPI.getSharedFile(token, pwd);
-      setFileInfo(res.data);
-      setError(null);
+      const res = await filesAPI.getSharedFile(token, password);
+      setFile(res.data);
     } catch (err) {
-      const status = err.response?.status;
-      const detail = err.response?.data?.detail;
-      if (status === 401) {
-        setNeedsPassword(true);
-        if (pwd) toast.error('Incorrect password');
-      } else {
-        setError(detail || 'This link is invalid or has expired.');
-      }
-    } finally {
-      setLoading(false);
+      // error handling
     }
-  };
+  }, [token, password]);
 
-  useEffect(() => { fetchFile(); }, [token]);
+  useEffect(() => {
+  fetchFile();
+}, [fetchFile]);
+
+
 
   const handlePasswordSubmit = (e) => {
     e.preventDefault();

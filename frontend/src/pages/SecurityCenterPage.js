@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Shield, AlertTriangle, CheckCircle, Zap, RefreshCw,
-  Brain, FileSearch, Lock, XCircle, ChevronDown, ChevronUp
+   AlertTriangle, CheckCircle,  RefreshCw,
+  Brain, FileSearch, Lock,ChevronDown, ChevronUp
 } from 'lucide-react';
 import { securityAPI } from '../api/client';
 import toast from 'react-hot-toast';

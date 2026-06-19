@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Users, Search, UserX, UserCheck, Edit2, RefreshCw, Shield, Plus } from 'lucide-react';
+import { Search, UserX,  Edit2, RefreshCw, Shield } from 'lucide-react';
 import { usersAPI } from '../api/client';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';

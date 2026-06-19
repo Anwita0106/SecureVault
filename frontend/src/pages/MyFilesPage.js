@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Files, Download, Trash2, Share2, Search, Filter,
-  FileText, Image, Archive, File, Shield, Clock,
-  ChevronDown, AlertCircle, RefreshCw, GitBranch
+  Files, Download, Trash2, Share2, Search,
+  FileText, Image, Archive, File, Shield,
+  RefreshCw, GitBranch
 } from 'lucide-react';
 import { filesAPI } from '../api/client';
 import toast from 'react-hot-toast';

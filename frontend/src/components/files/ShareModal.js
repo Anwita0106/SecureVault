@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Share2, Copy, Link, Lock, Clock, Download, Eye } from 'lucide-react';
+import { X, Share2, Copy, Link, Lock, Download, Eye } from 'lucide-react';
 import { filesAPI } from '../../api/client';
 import toast from 'react-hot-toast';
 
