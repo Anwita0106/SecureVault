@@ -41,19 +41,16 @@ app = FastAPI(
 )
 
 # CORS Middleware
-origins = [
-    "http://localhost:3000",
-    "https://secure-vault-l1v6.vercel.app",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=[
+        "http://localhost:3000",
+    ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 # Security Middleware
 app.add_middleware(SecurityMiddleware)
 
