@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Files, Users, HardDrive, Share2, Shield, AlertTriangle,
-  Upload,  TrendingUp, CheckCircle, XCircle, Clock,Activity 
+  Upload,  TrendingUp, CheckCircle, XCircle, Clock,Activity
 } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { securityAPI } from '../api/client';
@@ -54,7 +54,7 @@ const mockActivityData = Array.from({ length: 7 }, (_, i) => ({
 export default function DashboardPage() {
   const { user, isAdmin } = useAuth();
   const [stats, setStats] = useState(null);
-  const [activity, setActivity] = useState(null);
+  const [, setActivity] = useState(null);
   const [recentLogs, setRecentLogs] = useState([]);
   const [loading, setLoading] = useState(true);
 

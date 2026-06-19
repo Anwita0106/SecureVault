@@ -13,12 +13,13 @@ const formatBytes = (b) => {
 
 export default function SharedAccessPage() {
   const { token } = useParams();
-  const [fileInfo, setFileInfo] = useState(null);
+
+  const [fileInfo] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [file, setFile] = useState(null);
+  const [error] = useState(null);
+  const [, setFile] = useState(null);
   const [password, setPassword] = useState('');
-  const [needsPassword, setNeedsPassword] = useState(false);
+  const [needsPassword] = useState(false);
   const [downloading, setDownloading] = useState(false);
 
   const fetchFile = useCallback(async () => {
