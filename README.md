@@ -3,12 +3,15 @@
 **Enterprise-Grade Secure File Sharing and Document Management Platform**
 SecureVault is an enterprise-grade secure file sharing platform that combines AES-256 encryption, role-based access control, ClamAV malware scanning, audit logging, and secure share links into a unified document management system.
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688?logo=fastapi)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://reactjs.org)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-336791?logo=postgresql)](https://postgresql.org)
-[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker)](https://docker.com)
 
 ---
+
+
+##  Live Demo
+
+- Frontend: https://secure-vault-l1v6.vercel.app
+- Backend API: https://securevault-backend-qsc5.onrender.com
+- API Docs: https://securevault-backend-qsc5.onrender.com/api/docs
 
 ##  Quick Start
 
@@ -27,9 +30,6 @@ docker compose up -d
 Visit http://localhost
 ```
 
-**Default Admin Credentials:**
-- Email: `admin@example.com`
-- Password: `Admin@SecureVault2024!`
 
 ---
 
