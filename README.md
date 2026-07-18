@@ -165,7 +165,6 @@ DELETE /api/v1/users/{id}    - Deactivate (admin)
 GET  /api/v1/users/roles/all - List roles (admin)
 POST /api/v1/users/roles     - Create role (admin)
 ```
-
 ---
 
 ##  Docker Services
