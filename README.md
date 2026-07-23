@@ -125,6 +125,7 @@ POST /api/v1/auth/password-reset-request
 POST /api/v1/auth/password-reset
 ```
 
+
 ### Files
 ```
 POST   /api/v1/files/upload           - Upload + scan + encrypt
