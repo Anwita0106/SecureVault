@@ -241,7 +241,6 @@ SecureVault is fully containerized using Docker and Docker Compose for reproduci
 * Redis → Render Redis
 
 
-
 ##  License
 
 MIT License - see LICENSE file for details.
