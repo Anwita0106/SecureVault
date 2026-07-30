@@ -216,7 +216,7 @@ CLAMAV_ENABLED=true|false
 - Secure share links with expiration controls
 - File versioning and search
 - Complete audit logging
-- AI-powered security analysis
+- AI-powered security analysis        
 - Dockerized deployment
 
 ---
