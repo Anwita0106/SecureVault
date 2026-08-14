@@ -106,6 +106,12 @@ SecureVault/
 
 ---
 
+
+
+
+
+
+
 ##  Database Schema
 
 SecureVault uses PostgreSQL with dedicated tables for users, files, roles, share links, and audit logs.
