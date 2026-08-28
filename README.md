@@ -252,7 +252,7 @@ SecureVault is fully containerized using Docker and Docker Compose for reproduci
 MIT License - see LICENSE file for details.
 
 ## Author 
-
+  
 Anwita Padhi
 
 ---
