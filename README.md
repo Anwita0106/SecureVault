@@ -5,8 +5,6 @@ SecureVault is an enterprise-grade secure file sharing platform that combines AE
 
 ---
 
-Live Demo -  https://secure-vault-l1v6.vercel.app
-
 ##  Quick Start
 
 ```bash
